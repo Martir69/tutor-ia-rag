@@ -1,0 +1,39 @@
+services:
+
+  # ── Servidor LLM local ───────────────────────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: tutor-ollama
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:11434/api/tags"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+  # ── Tutor RAG ────────────────────────────────────────────────────────────────
+  tutor:
+    build: .
+    container_name: tutor-ia-rag
+    ports:
+      - "7860:7860"
+    volumes:
+      - ./docs:/app/docs:ro
+      - chroma_data:/app/chroma_db
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+      - GRADIO_SERVER_NAME=0.0.0.0
+      - GRADIO_SERVER_PORT=7860
+    depends_on:
+      ollama:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  ollama_data:
+  chroma_data:

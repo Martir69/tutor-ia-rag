@@ -1,0 +1,86 @@
+TEMARIO
+ 
+
+MÓDULO 1: Introducción a la Inteligencia Artificial y Agentes
+
+Unidad 1: Introducción a la Inteligencia Artificial
+
+Semana 1: Introducción a la Inteligencia Artificial.
+
+Semana 2: Introducción a la Inteligencia Artificial.
+
+Unidad 2: Agentes
+
+Semana 3: Agentes.
+
+Semana 4: Agentes.
+
+Semana 5: Complejidad y Tratabilidad.
+
+Semana 6: Primer Parcial.
+
+ 
+
+MÓDULO 2: Resolución de problemas y Lógica de Predicados
+
+Unidad 3: Resolución de Problemas Mediante la Búsqueda
+
+Semana 7: Busqueda no informada.
+
+Semana 8: Búsqueda informada y exploración.
+
+Unidad 4: Lógica de Predicados
+
+Semana 9: Lógica de predicados.
+
+Semana 10: Lenguaje Prolog para programar en IA.
+
+Semana 11: Lenguaje Prolog para programar en IA.
+
+       Semana 12: Segundo examen parcial.
+
+ 
+
+MÓDULO 3: Redes Neuronales, Aprendizaje Automático y Robótica
+
+Unidad 5: Redes Neuronales
+
+Semana 13: Redes Neuronales.
+
+Semana 14: Lenguaje Phyton para programar Neuronas Artificiales.
+
+Unidad 6: Aprendizaje Automático
+
+Semana 15: Aprendizaje Automático.
+
+Unidad 7: Interacción de Inteligencia Artificial con Tecnologías
+
+Semana 16: Interacción de Inteligencia Artificial con Tecnologías.
+
+Unidad 8: Robótica
+
+Semana 17: Robótica.
+
+Semana 18: Examen final.
+
+ 
+
+METODOLOGÍA
+Clases magistrales y resolución de dudas
+Trabajos en grupo y/o individuales al finalizar temas
+Laboratorios grupales y/o individuales
+Video tutoriales
+Consultas virtuales
+Presentaciones con herramientas informáticas
+Utilización de plataformas de colaboración para apoyo remoto 
+Texto paralelo o portafolio
+Uso de la plataforma Bblearn como aula virtual
+ 
+
+Evaluación
+Evaluación Parcial 1: 15 puntos. 13-03-2026
+Evaluación Parcial 2: 15 puntos 08-05-2026
+Actividades: 20 puntos
+Proyecto de curso: 15 puntos
+Evaluación Final: 35 puntos 12-06-2026 | Recuperación 19-06-2026
+Asistencia:                          80% mínimo
