@@ -6,8 +6,6 @@ services:
     container_name: tutor-ollama
     volumes:
       - ollama_data:/root/.ollama
-    ports:
-      - "11434:11434"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-sf", "http://localhost:11434/api/tags"]

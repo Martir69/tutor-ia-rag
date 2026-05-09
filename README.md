@@ -136,6 +136,9 @@ tutor-ia-rag/
 
 ### Opción 1 — Docker (recomendado para evaluación)
 
+**Requisitos:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado y corriendo.  
+**Puerto necesario libre:** `7860` (UI). Si algo ya lo usa: `GRADIO_SERVER_PORT=7861 docker compose up --build`
+
 ```bash
 docker compose up --build
 ```
