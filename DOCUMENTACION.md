@@ -5,6 +5,9 @@
 **Curso:** Laboratorio de Inteligencia Artificial  
 **Repositorio:** https://github.com/Martir69/tutor-ia-rag
 
+> Para instrucciones de instalación y ejecución, ver [README.md](README.md).  
+> Este documento cubre exclusivamente las decisiones técnicas y académicas del sistema.
+
 ---
 
 ## Apartado 1 — Stack Tecnológico (1.5 pts)

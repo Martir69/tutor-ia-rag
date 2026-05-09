@@ -282,4 +282,5 @@ if __name__ == "__main__":
         show_error=True,
         share=False,
         inbrowser=False,
+        show_api=False,
     )

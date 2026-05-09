@@ -9,6 +9,9 @@
 [![Ollama](https://img.shields.io/badge/Ollama-phi3:mini-black)](https://ollama.com)
 [![ChromaDB](https://img.shields.io/badge/ChromaDB-0.5-7C6DFA)](https://trychroma.com)
 [![License](https://img.shields.io/badge/License-MIT-22C55E)](LICENSE)
+[![Documentación](https://img.shields.io/badge/Documentaci%C3%B3n-Serie%20II-7C6DFA)](DOCUMENTACION.md)
+
+> 📄 **Documentación académica completa (Serie II — stack, arquitectura, SOLID, prompts):** [DOCUMENTACION.md](DOCUMENTACION.md)
 
 ---
 
@@ -71,27 +74,17 @@ Pregunta → ChromaDB (búsqueda semántica) → TOP-4 chunks relevantes
 
 ## Stack tecnológico
 
-| Tecnología | Versión | Rol | Por qué |
-|---|---|---|---|
-| Python | 3.12 | Lenguaje base | Tipado moderno, dataclasses nativas |
-| ChromaDB | 0.5.23 | Vector store | Persistencia local, cero configuración |
-| Ollama | 0.3.3 | LLM runner | Ejecuta modelos GGUF localmente sin GPU |
-| phi3:mini | 3.8B Q4 | Modelo LLM | Razonamiento en 2.2GB RAM, en español |
-| PyMuPDF | 1.24.11 | PDF parser | Extracción nativa + fallback a OCR |
-| Gradio | 4.44.1 | Web UI | UI de chat lista en minutos |
-| Docker | 29+ | Deploy | Un comando, cualquier máquina |
-
----
-
-## Principios SOLID — dónde y cómo
-
-| Principio | Archivo | Implementación concreta |
+| Tecnología | Versión | Rol |
 |---|---|---|
-| **S** — Single Responsibility | `indexer.py`, `retriever.py`, `app.py` | Cada archivo tiene UNA razón para cambiar |
-| **O** — Open/Closed | `indexer.py:_load_documents()` | Agregar `.docx` = solo agregar `_parse_docx()`, sin tocar `index()` |
-| **L** — Liskov Substitution | `retriever.py` implementa `IRetriever` | Puede reemplazarse con `PineconeRetriever` sin cambiar `app.py` |
-| **I** — Interface Segregation | `interfaces.py` | `IIndexer` e `IRetriever` separados — no un solo `IDatabaseManager` |
-| **D** — Dependency Inversion | `app.py` → `IRetriever` | `app.py` nunca importa ChromaDB directamente |
+| Python | 3.12 | Lenguaje base |
+| ChromaDB | 0.5.23 | Vector store local |
+| Ollama | 0.3.3 | LLM runner sin GPU |
+| phi3:mini | 3.8B Q4 | Modelo LLM |
+| PyMuPDF | 1.24.11 | PDF parser + fallback OCR |
+| Gradio | 4.44.1 | Web UI |
+| Docker | 29+ | Deploy un-comando |
+
+> Las justificaciones técnicas de cada elección están en [DOCUMENTACION.md → Apartado 1](DOCUMENTACION.md#apartado-1--stack-tecnológico-15-pts).
 
 ---
 
@@ -163,11 +156,8 @@ python3 -m src.interface.app            # lanzar UI
 ## Agregar nuevos documentos
 
 ```bash
-# 1. Copia el PDF
 cp nuevo_material.pdf docs/
-
-# 2. Re-indexa (botón "Indexar Documentos" en la UI)
-# O desde terminal:
+# Luego clic en "Indexar Documentos" en la UI, o:
 python3 -m src.infrastructure.indexer
 ```
 
